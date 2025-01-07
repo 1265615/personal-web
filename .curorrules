@@ -1,0 +1,32 @@
+1. 明确核心需求：这是一个哥特式风格的个人网站，主要用于展示个人简介。核心元素包含：姓名、MBTI、个人简短介绍。
+2. 页面布局/内容：主页面分为若干区块：标题区块（展示姓名、MBTI、欢迎语等），“关于我”区块（进一步介绍）。需要有一个“321，准备好了吗？”的过渡动画。
+3. 样式与主题：采用哥特式的配色方案，通常以深色背景、灰暗或者暗紫、暗红等色调为主，字体飘逸，保证文字可阅读性。
+4. 音乐播放：在页面中嵌入本地音乐文件，需要提供播放控件或自动播放（现代浏览器通常限制自动播放，需要在用户交互后才可播放）。
+5. 技术要点：仅支持现代浏览器即可，无需兼容老旧版本。HTML + CSS 即可实现基本的页面布局和动画。如果需要更丰富的动画可使用CSS动画或者提供少量JavaScript实现过渡效果。
+6. 伪代码构思：
+   - index.html:
+     <html>
+       <head> 引入必需的字体与CSS，定义哥特式配色等 </head>
+       <body>
+         <header>展示姓名huohua，MBTI: INFJ</header>
+         <section class="intro">
+           <h1>欢迎来到我的个人网站</h1>
+           <div class="transition">动画：321准备好了吗？</div>
+         </section>
+         <section class="about-me">
+           <h2>关于我</h2>
+           <p>同上信息简要介绍，风格飘逸</p>
+         </section>
+         <section class="music">
+           <audio controls src="music/gothic.mp3"></audio>
+         </section>
+       </body>
+     </html>
+   - style.css:
+     body, html 设置深色背景、血红或暗紫色文字
+     选用飘逸的字体（如“Cinzel”或其他哥特类字体）
+     .transition 使用CSS动画：逐字母/逐元素淡入或类似效果
+   - JS（若需要增强过渡动画）
+     检测页面加载，或点击后触发“321，准备好了吗？”渐显/渐隐
+7. 代码输出：
+   - 在VSCode中放置 index.html 与 style.css，放置本地音乐文件并正确引用

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huohua的个人网站</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 倒计时遮罩层 -->
+    <div class="countdown-overlay" id="countdownOverlay">
+        <div class="countdown-container">
+            <div class="countdown" id="countdown">3</div>
+            <button id="confirmBtn" class="confirm-btn" style="display: none;">进入城堡</button>
+        </div>
+    </div>
+
+    <!-- 装饰元素 -->
+    <div class="decorative-elements">
+        <div class="bats">
+            <div class="bat"></div>
+            <div class="bat"></div>
+            <div class="bat"></div>
+        </div>
+        <div class="castle"></div>
+        <div class="dead-tree"></div>
+        <div class="pumpkin"></div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="main-content" id="mainContent" style="display: none;">
+        <header>
+            <h1 style="font-family: 'UnifrakturMaguntia', cursive; text-align: center;">Huohua</h1>
+            <div class="mbti" style="font-family: 'MedievalSharp', cursive; text-align: center;">INFJ</div>
+        </header>
+
+        <section class="intro" style="text-align: center;">
+            <h2 style="font-family: 'UnifrakturMaguntia', cursive;">欢迎来到我的个人网站</h2>
+        </section>
+
+        <section class="about-me" style="text-align: center;">
+            <h2 style="font-family: 'UnifrakturMaguntia', cursive;">关于我</h2>
+            <p style="font-family: 'MedievalSharp', cursive;">这里是关于我的简短介绍：没有什么好说的</p>
+        </section>
+
+        <section class="music">
+            <h2 style="font-family: 'UnifrakturMaguntia', cursive;">背景音乐</h2>
+            <div class="audio-player">
+                <audio id="bgMusic" controls>
+                    <!-- 支持多种音频格式 -->
+                    <source src="music/gothic.mp3" type="audio/mpeg">
+                    <p class="audio-error" style="font-family: 'MedievalSharp', cursive;">您的浏览器不支持音频播放，或音频文件不存在。</p>
+                </audio>
+                <div class="audio-controls">
+                    <button id="playPauseBtn" class="control-btn"
+                        style="font-family: 'MedievalSharp', cursive;">播放/暂停</button>
+                    <div class="volume-control">
+                        <label for="volume" style="font-family: 'MedievalSharp', cursive;">音量：</label>
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
